@@ -1,0 +1,8 @@
+pytesseract
+Pillow
+PyMuPDF
+pandas
+openpyxl
+python-docx
+python-pptx
+requests
