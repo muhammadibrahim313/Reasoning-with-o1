@@ -52,4 +52,4 @@ def main():
         print("No files were successfully processed and summarized.")
 
 if __name__ == "__main__":
-    main()
+    main() 
