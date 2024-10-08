@@ -1,12 +1,16 @@
 import requests
-import json
-import base64
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 UPSTAGE_API_URL = "https://api.upstage.ai/v1/document-ai/ocr"
+UPSTAGE_API_KEY = os.getenv("UPSTAGE_API_KEY")
 
-def upstage_ocr(file_path, api_key):
+def upstage_ocr(file_path):
     headers = {
-        "Authorization": f"Bearer {api_key}"
+        "Authorization": f"Bearer {UPSTAGE_API_KEY}"
     }
     
     with open(file_path, "rb") as file:
